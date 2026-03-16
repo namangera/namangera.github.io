@@ -1,0 +1,10 @@
+title: Naman Gera
+description: Writing about GIS, programming, and projects.
+url: "https://namangera.github.io"
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - README.md

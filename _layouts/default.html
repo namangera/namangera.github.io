@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} — {% endif %}Naman Gera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    color: #2a2218;
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 120px;
+  }
+
+  header {
+    margin-bottom: 64px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #c8b99a;
+  }
+
+  header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  header h1 a {
+    color: #2a2218;
+    text-decoration: none;
+  }
+
+  header p {
+    font-size: 16px;
+    color: #7a6a55;
+    font-style: italic;
+  }
+
+  nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    font-size: 15px;
+    color: #5a4a35;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav a:hover { border-bottom-color: #5a4a35; }
+  nav a.active { border-bottom: 1px solid #5a4a35; }
+
+  .section-label {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9a8a75;
+    margin-bottom: 8px;
+    margin-top: 48px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .section-label:first-child { margin-top: 0; }
+
+  .post-list { list-style: none; }
+
+  .post-list li {
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd4c0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .post-list li:first-child { padding-top: 0; }
+
+  .post-list a {
+    font-size: 19px;
+    color: #2a2218;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .post-list a:hover { border-bottom-color: #2a2218; }
+
+  .post-date {
+    font-size: 14px;
+    color: #9a8a75;
+    font-style: italic;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .about-text p { margin-bottom: 20px; }
+
+  .about-text a {
+    color: #2a2218;
+    border-bottom: 1px solid #9a8a75;
+    text-decoration: none;
+  }
+
+  .about-text a:hover { border-bottom-color: #2a2218; }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid #c8b99a;
+    font-size: 14px;
+    color: #9a8a75;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1><a href="/">Naman Gera</a></h1>
+  <p>Ontario, Canada</p>
+  <nav>
+    <a href="/" {% if page.url == '/' %}class="active"{% endif %}>Writing</a>
+    <a href="/about" {% if page.url == '/about' or page.url == '/about/' %}class="active"{% endif %}>About</a>
+  </nav>
+</header>
+
+{{ content }}
+
+<footer>Written by Naman Gera · Ontario, Canada</footer>
+
+</body>
+</html>
