@@ -9,6 +9,6 @@ title: About
   <p>This site is where I write about things I'm figuring out: code that was harder than it should have been, projects I've worked through, and occasional personal notes.</p>
   <p>
     You can find me on <a href="https://github.com/namangera">GitHub</a> and
-    <a href="https://linkedin.com">LinkedIn</a>.
+    <a href="https://linkedin.com/in.naman-gera/">LinkedIn</a>.
   </p>
 </div>
