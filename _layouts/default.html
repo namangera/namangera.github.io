@@ -3,70 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if page.title %}{{ page.title }} — {% endif %}Naman Gera</title>
+<title>{% if page.title %}{{ page.title }} / {% endif %}Naman Gera</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #f5f0e8;
-    color: #2a2218;
-    font-family: 'EB Garamond', serif;
-    font-size: 19px;
-    line-height: 1.75;
-    max-width: 680px;
+    background: #f8f8f8;
+    color: #1a1a1a;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 660px;
     margin: 0 auto;
     padding: 64px 24px 120px;
   }
 
   header {
-    margin-bottom: 64px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid #c8b99a;
+    margin-bottom: 56px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #d4d4d4;
   }
 
   header h1 {
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
   }
 
   header h1 a {
-    color: #2a2218;
+    color: #1a1a1a;
     text-decoration: none;
   }
 
   header p {
-    font-size: 16px;
-    color: #7a6a55;
-    font-style: italic;
+    font-size: 13px;
+    color: #888;
+    font-weight: 300;
   }
 
   nav {
-    margin-top: 20px;
+    margin-top: 18px;
     display: flex;
     gap: 24px;
   }
 
   nav a {
-    font-size: 15px;
-    color: #5a4a35;
+    font-size: 13px;
+    color: #555;
     text-decoration: none;
     border-bottom: 1px solid transparent;
   }
 
-  nav a:hover { border-bottom-color: #5a4a35; }
-  nav a.active { border-bottom: 1px solid #5a4a35; }
+  nav a:hover { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+  nav a.active { color: #1a1a1a; border-bottom: 1px solid #1a1a1a; }
 
   .section-label {
-    font-size: 13px;
-    letter-spacing: 0.08em;
+    font-size: 11px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #9a8a75;
-    margin-bottom: 8px;
-    margin-top: 48px;
-    font-family: 'JetBrains Mono', monospace;
+    color: #aaa;
+    margin-bottom: 6px;
+    margin-top: 44px;
+    font-weight: 400;
   }
 
   .section-label:first-child { margin-top: 0; }
@@ -74,8 +76,8 @@
   .post-list { list-style: none; }
 
   .post-list li {
-    padding: 18px 0;
-    border-bottom: 1px solid #ddd4c0;
+    padding: 14px 0;
+    border-bottom: 1px solid #e4e4e4;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -85,39 +87,40 @@
   .post-list li:first-child { padding-top: 0; }
 
   .post-list a {
-    font-size: 19px;
-    color: #2a2218;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1a1a1a;
     text-decoration: none;
     border-bottom: 1px solid transparent;
   }
 
-  .post-list a:hover { border-bottom-color: #2a2218; }
+  .post-list a:hover { border-bottom-color: #1a1a1a; }
 
   .post-date {
-    font-size: 14px;
-    color: #9a8a75;
-    font-style: italic;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 300;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
-  .about-text p { margin-bottom: 20px; }
+  .about-text p { margin-bottom: 18px; font-weight: 300; }
 
   .about-text a {
-    color: #2a2218;
-    border-bottom: 1px solid #9a8a75;
+    color: #1a1a1a;
+    border-bottom: 1px solid #ccc;
     text-decoration: none;
   }
 
-  .about-text a:hover { border-bottom-color: #2a2218; }
+  .about-text a:hover { border-bottom-color: #1a1a1a; }
 
   footer {
-    margin-top: 80px;
-    padding-top: 24px;
-    border-top: 1px solid #c8b99a;
-    font-size: 14px;
-    color: #9a8a75;
-    font-style: italic;
+    margin-top: 72px;
+    padding-top: 20px;
+    border-top: 1px solid #d4d4d4;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 300;
   }
 </style>
 </head>
@@ -127,14 +130,14 @@
   <h1><a href="/">Naman Gera</a></h1>
   <p>Ontario, Canada</p>
   <nav>
-    <a href="/" {% if page.url == '/' %}class="active"{% endif %}>Writing</a>
-    <a href="/about" {% if page.url == '/about' or page.url == '/about/' %}class="active"{% endif %}>About</a>
+    <a href="/" {% if page.url == '/' %}class="active"{% endif %}>writing</a>
+    <a href="/about" {% if page.url == '/about' or page.url == '/about/' %}class="active"{% endif %}>about</a>
   </nav>
 </header>
 
 {{ content }}
 
-<footer>Written by Naman Gera · Ontario, Canada</footer>
+<footer>Naman Gera · Ontario, Canada</footer>
 
 </body>
 </html>

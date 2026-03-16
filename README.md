@@ -4,8 +4,8 @@ Personal site and blog.
 
 ## Adding a new post
 
-1. Create a new file in `_posts/` named: `YYYY-MM-DD-your-title.md`
-2. Add this to the top of the file:
+1. Create a file in `_posts/` named: `YYYY-MM-DD-your-title.md`
+2. Add this front matter at the top:
 
 ```
 ---
@@ -16,37 +16,16 @@ category: Programming
 ---
 ```
 
-3. Write your post in Markdown below the `---`
-4. Push to GitHub — it goes live automatically in ~1 minute
+3. Write in Markdown below the `---`
+4. Push to GitHub live in ~1 minute
 
 ## Categories
-
-Use one of these exactly (capitalization matters):
 
 - `Programming`
 - `Project Writeup`
 - `Personal`
 
-## Markdown basics
-
-```markdown
-## Heading
-
-Regular paragraph text.
-
-**bold** and *italic*
-
-- bullet list
-- item two
-
-```python
-# code block
-print("hello")
-` ``
-
-[link text](https://example.com)
-```
-
 ## Deploy
 
-Push to the `main` branch of `namangera.github.io`. GitHub Pages builds automatically.
+Push to the `main` branch of `namangera.github.io`.  
+Go to **Settings → Pages → Source: Deploy from branch → main**.

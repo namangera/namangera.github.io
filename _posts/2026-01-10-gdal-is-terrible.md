@@ -9,7 +9,7 @@ GDAL is the foundational library for reading and writing geospatial raster and v
 
 The API is old. The Python bindings feel like a thin wrapper over a C library, because they are. Error messages are cryptic. The documentation is technically complete but practically unhelpful. Installation has ruined many afternoons.
 
-And yet — I use it constantly, because there is nothing else. QGIS uses it. Rasterio wraps it. You can't really escape it.
+And yet I use it constantly, because there is nothing else. QGIS uses it. Rasterio wraps it. You can't really escape it.
 
 ## Rasterio makes it bearable
 
@@ -31,7 +31,7 @@ The underlying GDAL version of the same thing is not readable. Rasterio is.
 
 ## The command line tools are actually great
 
-What I've come to appreciate is the GDAL command line utilities. `gdalinfo`, `gdal_translate`, `gdalwarp`, `ogr2ogr` — these are genuinely good for quick format conversion and inspection.
+What I've come to appreciate is the GDAL command line utilities. `gdalinfo`, `gdal_translate`, `gdalwarp`, `ogr2ogr` these are genuinely good for quick format conversion and inspection.
 
 ```bash
 gdalwarp -t_srs EPSG:4326 input.tif output_wgs84.tif

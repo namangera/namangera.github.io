@@ -5,9 +5,9 @@ date: 2026-03-10
 category: Project Writeup
 ---
 
-Municipal drainage inventories are almost always incomplete. Culverts — the pipes and box structures that carry streams under roads — are frequently missing from official datasets. This matters for flood modelling, infrastructure assessment, and emergency planning.
+Municipal drainage inventories are almost always incomplete. Culverts the pipes and box structures that carry streams under roads are frequently missing from official datasets. This matters for flood modelling, infrastructure assessment, and emergency planning.
 
-The approach is conceptually simple: a culvert exists at almost every point where a stream crosses a road. So find all those intersections, then validate them.
+The approach is conceptually simple: a culvert exists at almost every point where a stream crosses a road. Find all those intersections, then validate them.
 
 ## The intersection step
 
@@ -29,7 +29,7 @@ For a mid-sized county this usually produces thousands of candidate locations. M
 
 ## Validation with DEMs
 
-A culvert sits at or below road grade — the DEM profile across the road at that point will show a depression or flat crossing. A bridge shows a gap or discontinuity. I extract a short elevation profile perpendicular to the road at each candidate point and look at the slope and shape. Not a perfect classifier but it gets you a long way.
+A culvert sits at or below road grade the DEM profile across the road at that point will show a depression or flat crossing. A bridge shows a gap or discontinuity. I extract a short elevation profile perpendicular to the road at each candidate point and look at the slope and shape. Not a perfect classifier but it gets you a long way.
 
 ## What I learned
 
